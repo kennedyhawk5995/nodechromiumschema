@@ -1,6 +1,6 @@
 'use strict';
 const os = require('os');
-const APP_NAME = 'job-runner-bb349b';
+const APP_NAME = 'job-runner-480d8c';
 const VERSION = '1.0.0';
 class UjobUrunnerHandler {
   constructor(options = {}) {
